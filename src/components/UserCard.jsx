@@ -1,11 +1,11 @@
 import React from "react";
 
-const UserCard = ({userFeed}) => {
-    const {firstName, lastName, photoUrl, age, gender, about} = userFeed
+const UserCard = ({user}) => {
+    const {firstName, lastName, photoUrl, age, gender, about} = user
   return (
     <div className="card bg-base-300 w-96 shadow-sm">
       <figure>
-        <img
+        <img className="w-full h-64 object-contain"
           src={photoUrl}
           alt="Shoes"
         />
