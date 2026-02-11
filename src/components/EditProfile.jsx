@@ -8,10 +8,10 @@ import UserCard from "./UserCard";
 const EditProfile = ({ user }) => {
   const [firstName, setFirstName] = useState(user.firstName);
   const [lastName, setLastName] = useState(user.lastName);
-  const [age, setAge] = useState(user.age);
-  const [gender, setGender] = useState(user.gender);
+  const [age, setAge] = useState(user.age || "");
+  const [gender, setGender] = useState(user.gender || "");
   const [photoUrl, setPhotoUrl] = useState(user.photoUrl);
-  const [about, setAbout] = useState(user.about);
+  const [about, setAbout] = useState(user.about || "");
   const [error, setError] = useState("");
   const [showToast, setShowToast] = useState(false);
   const dispatch = useDispatch();
