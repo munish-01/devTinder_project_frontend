@@ -11,7 +11,7 @@ const Request = () => {
 
   const reviewRequest = async (status, _id) => {
     try {
-      const res = axios.post(
+      const res =  axios.post(
         BASE_URL + "/request/review/" + status + "/" + _id,
         {},
         { withCredentials: true },
@@ -27,7 +27,6 @@ const Request = () => {
       const res = await axios.get(BASE_URL + "/user/requests/received", {
         withCredentials: true,
       });
-      console.log(res.data.data);
       dispatch(addRequests(res?.data?.data));
     } catch (err) {
       setError(err?.response?.data || "something went wrong!!!");
